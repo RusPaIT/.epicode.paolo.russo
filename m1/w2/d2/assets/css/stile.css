@@ -61,6 +61,10 @@ section {
     margin-bottom: 2em;
     position: relative;
 }
+.h2{
+    font-size: 2rem;
+    font-weight: bolder;
+}
 section h2 {
     text-align: center;
     color: #333;
@@ -211,6 +215,7 @@ footer a {
     color: #c77ea2;
     font-size: 4rem;
     display: block;
+    border-radius: 50%;
 }
     .social a {
         color: rgb(45, 101, 185);
