@@ -61,10 +61,6 @@ section {
     margin-bottom: 2em;
     position: relative;
 }
-.h2{
-    font-size: 2rem;
-    font-weight: bolder;
-}
 section h2 {
     text-align: center;
     color: #333;
@@ -183,6 +179,7 @@ aside div {
 aside div p:last-child {
     margin-bottom: 0;
     font-size: 0.8em;
+    text-align: right;
     text-align: right;
 }
 
