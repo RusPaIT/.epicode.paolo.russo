@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width"=</table>
+    <style>
+        table {
+              border-collapse: collapse;
+          }
+      td {
+                border: 1px solid black;
+            }
+        </style>
+    <title>Document</title>
+
+</head>
+<body>
+    <table>
+        <caption>Elenco compensi</caption>
+        <thead>
+            <tr>
+                <th>NOME</th>
+                <th>COGNOME</th>
+                <th>COMPENSO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aldo</td>
+                <td>Bianchi</td>
+                <td>&euro; 200</td>
+            </tr>
+            <tr>
+                <td>Mario</td>
+                <td>Rossi</td>
+                <td>&euro; 150</td>
+            </tr>
+            <tr>
+                <td>Nicola</td>
+                <td>Verdi</td>
+                <td>&euro; 300</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">TOTALE COMPENSI: &euro; 650</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+
+
+
+    <form method="post" action="prova.php" autocomplete="on">
+        <fieldset>
+            <legend>Anagrafica</legend>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Inserire il nome..." required>
+            <label for="cognome">Cognome</label>
+            <input type="text" id="cognome" name="cognome" placeholder="Inserire il cognome..." required>
+            <label for="indirizzo">Indirizzo</label>
+            <textarea name="indirizzo" id="indirizzo" placeholder="Inserire l'indirizzo..."></textarea>
+            <label for="telefono">Telefono</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="Inserire un numero di telefono valido...">
+            <label for="dataNascita">Data di nascita</label>
+            <input type="date" name="dataNascita" id="dataNascita">
+        </fieldset>
+        <fieldset>
+            <legend>Opzioni</legend>
+            <h4>Tipo di corso</h4>
+<label for="HTML">HTML</label>
+            <input type="checkbox" id="HTML" name="HTML">
+            <label for="CSS">CSS</label>
+            <input type="checkbox" id="CSS" name="CSS">
+            <label for="Javascript">Javascript</label>
+            <input type="checkbox" id="Javascript" name="Javascript">
+            <h4>Figura in uscita</h4>
+            <input type="radio" id="full" name="figura">
+            <label for="full">Full-Stack</label>
+            <input type="radio" id="front" name="figura">
+            <label for="front">Front-End</label>
+            <input type="radio" id="back" name="figura">
+            <label for="back">Back-End</label>
+            <h4>Destinazione preferita</h4>
+            <select id="destinazione" name="destinazione">
+                <option value="" selected></option>
+                <option value="free">Freelance</option>
+                <option value="azienda">Azienda</option>
+<option value="multi">Multinazionale</option>
+            </select>
+        </fieldset>
+        <button type="submit" id="invia">INVIA</button>
+        <button type="reset" id="cancella">CANCELLA</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

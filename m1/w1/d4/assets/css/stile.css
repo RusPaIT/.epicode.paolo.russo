@@ -1,0 +1,220 @@
+/* IMPOSTAZIONI GENERALI */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 30px;
+    font-weight: 500;
+    background-image: url(..//img/sfondo.png);
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Poppins', sans-serif;
+
+} 
+/* HEADER */
+header{
+    height: 30vh;
+    background-color:#0cb7b7;
+    background: linear-gradient(#0cb7b7, #9198e5);
+    text-align: center;
+    box-shadow: 3px 3px 3px 3px gray;
+    margin-left: 16px;
+}  
+header img{
+    width: 20vh;
+    height: 60px;
+    margin: 20px;
+}
+nav{
+    text-align: center;
+    margin-left: -30px;
+}
+header p {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+li a::before{
+    content: '\27F9';
+    margin-right: 3px;
+}
+li a::after{
+    content: '\27F8';
+    margin-left: 3px;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+}
+ul li{
+    list-style-type: none;
+}
+hr{
+    display: none;
+}
+/* MAIN */
+main{
+    background-color: white;
+    margin:20px 0 0 20px;
+    box-shadow:3px 3px 3px 3px gray;
+    padding-bottom: 30px;
+}
+article{
+    margin:10px 10px 10px 10px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+article h1{
+    font-weight: 500;
+    font-size: 30px;
+    padding: 10px;
+}
+h1 + p{
+    font-size: small;
+    color: gray;
+    word-spacing: 3px;
+}
+i{
+    margin-right: 5px;
+}
+article p{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+strong{
+    color: rgb(241, 38, 71);
+    font-weight: bold;
+}
+li{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+code{
+    background-color: rgb(195, 192, 192);
+}
+article h2{
+    margin-top:10px;
+}
+ol{
+    margin-top: 20px;
+}
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+caption{
+    font-weight: 700;
+    font-style: oblique;
+}
+table{
+    border: 1px solid white;
+    border-bottom:3px solid rgb(102, 102, 235);
+    vertical-align: middle;
+}
+thead{
+    background-color: rgb(102, 102, 235);
+    font-size: larger;
+    color: white;
+    height:9vh;
+   
+}
+th{
+    word-spacing: 8px;
+    text-align: center;
+    
+}
+tbody tr:nth-child(even){
+    background-color: rgb(217, 213, 213);
+}
+tbody tr{
+    height: 7vh;
+
+}
+td{
+    text-align: center;
+    line-height: 9vh;
+}
+p a {
+    color:rgb(12, 183, 183);
+    font-weight: 600;
+}
+iframe{
+    border-radius: 20px;
+    height: 22vh;
+    margin-left:0px;
+}
+
+/* FORM */
+section{
+    margin-top: 20px;
+    background-color: gray;
+   padding: 10px 10px 10px 10px;
+   border: 2px solid rgb(107, 105, 105);
+
+   
+}
+section h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 23px;
+    
+}
+input{
+   border-top-color: white;
+   border-right-color: white;
+   border-left-color:white;
+   border-bottom-style: dotted;
+}
+button{
+    background-color: rgb(61, 61, 193);
+    color: white;
+}
+
+/* ELEMENTI NELL' ASIDE */
+aside h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 23px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+aside div{
+    background-color: gray;
+    margin:10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border: 2px solid rgb(107, 105, 105);
+}
+div p + p{
+    text-align: end;
+}
+div a{
+    color: rgb(61, 61, 193);
+    font-weight: bolder;
+}
+/* FOOTER */
+footer{
+    background-color: rgb(9, 38, 48);
+    padding-bottom: 30px;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    color: white;
+    line-height: 20px;
+    border:2px solid rgb(9, 38, 48);
+}
+footer p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+address{
+    text-align: center;
+}
+address a {
+    color:rgb(226, 43, 76);
+    font-weight: bold;
+}
