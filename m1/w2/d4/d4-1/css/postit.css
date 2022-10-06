@@ -1,0 +1,66 @@
+html body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: black;
+    height: 100px;
+}
+footer{
+    background-color: black;
+    height: 100px;
+}
+span{
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.postit{
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    box-shadow: 5px 5px 10px 0 black;
+    transition-property: width 2s;
+    transition-duration: 2s;
+    font-family: 'Indie Flower';
+    font-style: normal;
+    font-weight:bolder;
+    font-display: swap;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    
+}
+
+.giallo{
+    background-color: yellow;
+    background-image: linear-gradient( to bottom, #ffff00 0%, gray 120%);
+    transform: rotate(-4deg);
+    
+}
+.verde{
+    background-color: green;
+    background-image: linear-gradient( to bottom, green 0%, #808080 120%);
+    transform: rotate(3deg);
+}
+.lilla{
+    background-color: #955a95;
+    background-image: linear-gradient( to bottom,  #955a95, #808080 120%);
+    transform: rotate(-4deg);
+}
+#conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    justify-content: center;
+    background-color: rgb(87, 84, 84);
+    padding: 30px;
+}
+.postit:hover{
+    transform: scale(1.1);
+}
