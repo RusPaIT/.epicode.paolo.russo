@@ -34,13 +34,18 @@ torta1();
 var btn = document.getElementById("calcola");
 
 btn.addEventListener("click",function(){
+    var somma = '';
     var cibo = Number (document.getElementById("cibo").value);
     var detersivi = Number (document.getElementById("detersivi").value);
     var abiti = Number (document.getElementById("abiti").value);
     var somma =  Number (cibo + detersivi + abiti);
     totale(somma);
+    document.getElementById("cibo").value = '';
+    document.getElementById("detersivi").value = '';
+    document.getElementById("abiti").value = '';
+
 })
 
 function totale(somma) {
-    document.getElementById("totale").innerHTML += somma;
+    document.getElementById("totale").innerHTML = "&euro; " + somma;
 }

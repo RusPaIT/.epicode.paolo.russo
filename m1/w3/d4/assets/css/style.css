@@ -1,0 +1,13 @@
+html{
+    height: 100%;
+    background: linear-gradient(to right top, #c4430b 0%, #f2310b 50%, #c4430b 100%);
+    text-align: center;
+}
+
+h1{
+    color: white;
+}
+ul{
+    display: inline-block;
+    text-align: left;
+}
