@@ -1,0 +1,118 @@
+body {
+    font-family: Fira Sans, Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    color: black;
+    background-image:url(../img/Banner.jpg);
+    background-size: cover;
+    padding: 10px;
+    box-shadow: 0 2px 15px #d3d3d3;
+}
+
+main {
+    margin: 10px;
+}
+
+img {
+    width: 300px;
+    display: flex;
+    float: left;
+    margin-right: 20px;
+}
+
+div p {
+    font-size: larger;
+    font-weight: bolder;
+    color: red;
+}
+
+h3 {
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+hr {
+    border: 2px solid black;
+    width: 50%;
+    background-color: black;
+}
+
+.ultimaSection {
+    margin-bottom: 50px;
+}
+
+.acquista {
+    text-decoration: none;
+}
+
+#calcolatrice {
+    border: 2px solid black;
+    width: fit-content;
+    background-color: aquamarine;
+    position: fixed;
+    top: 300px;
+    right: 100px;
+
+}
+
+.rigaCalc {
+    margin-left: 2px;
+}
+
+.tasto {
+    background-color: black;
+    color: aquamarine;
+    font-size: 22pt;
+    border: none;
+    margin: 4px 2px;
+    height: 40px;
+    width: 46px;
+}
+
+.display {
+    background: none;
+    color: black;
+    font-size: 24pt;
+    border: 2px solid black;
+    margin: 4px 2px 0px 4px;
+    width: 205px;
+    height: 40px;
+}
+
+.uguale {
+    width: 102px;
+}
+
+::placeholder {
+    font-size: 15px;
+    color: rgb(78, 75, 75);
+    text-align: center;
+}
+
+aside h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    background-color: aquamarine;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.cell {
+    color: red;
+    text-decoration: none;
+}

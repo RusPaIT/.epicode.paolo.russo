@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Realizziamo una calcolatrice con JS.">
+    <title>Project-Week</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>BENVENUTI NEL MIO PERSONAL SHOP</h1>
+        <h2>Acquista anche tu il computer che più ti piace a prezzi convenienti!</h2>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h3>ACER</h3>
+                <br>
+                <img src="assets/img/pc1.jpg" alt="">
+                <h4>Acer Aspire 3 A315-58-36BT PC Portatile, Notebook,<br> Processore Intel Core i3-1115G4, RAM 8 GB
+                    DDR4,<br> 256GB
+                    PCIe NVMe SSD, Display 15.6" FHD LED, Intel UHD,<br> Windows 11 Home in S mode, Silver</h4>
+                <p>Prezzo consigliato 399,00&euro; |||<span> 30&#37; di sconto!!! |||</span> <a class="acquista"
+                        href="ACQUISTA" target="_blank">ACQUISTA</a></p>
+            </div>
+            <div>
+                <br>
+                <img src="assets/img/pc2.jpg" alt="">
+                <h4>Acer Nitro 5 AN515-45-R666 Notebook Gaming,<br> Processore AMD Ryzen 7 5800H, Ram 16 GB DDR4,<br>
+                    1024 GB PCIe SSD, Display 15.6" QHD IPS 165 Hz G-sync eligible,<br> NVIDIA GeForce RTX 3080 8 GB,
+                    Windows 10 Home</h4>
+                <p>Prezzo consigliato 2299,00&euro; |||<span> 28&#37; di sconto!!! |||</span> <a class="acquista"
+                        href="www.paperino.com" target="_blank">ACQUISTA</a></p>
+            </div>
+        </section>
+        <section>
+            <hr>
+            <div>
+                <h3>APPLE</h3>
+                <br>
+                <img src="assets/img/pc3.jpg" alt="">
+                <h4>2022 Apple PC Portatile MacBook Pro con chip M2: display Retina 13",<br> 8GB di RAM, 256GB ​​di
+                    archiviazione ​​​​​SSD ​​​​​​​Touch Bar,<br> tastiera retroilluminata; color​​​​​​​ Grigio siderale
+                </h4>
+                <p>Prezzo consigliato 1453,00&euro; |||<span> 11&#37; di sconto!!! |||</span> <a class="acquista"
+                        href="www.paperino.com" target="_blank">ACQUISTA</a></p>
+            </div>
+            <div class="ultimaSection">
+                <br>
+                <img src="assets/img/pc4.jpg" alt="">
+                <h4>2017 Apple MacBook Air with Intel 1.8 GHz Core i5 chip (13-inch,<br> 8GB RAM, 256GB SSD Storage,
+                    Qwerty Italian) - Silver (Ricondizionato)</h4>
+                <p>Prezzo consigliato 575,00&euro; |||<span> 7&#37; di sconto!!! |||</span> <a class="acquista"
+                        href="www.paperino.com" target="_blank">ACQUISTA</a></p>
+            </div>
+        </section>
+        <aside id="calcolatrice">
+            <h4>Calcola il tuo sconto</h4>
+            <div class="rigaCalc">
+                <input type="text" name="display" id="calcoli" readonly="readonly" class="display"
+                    placeholder="es. 10&percnt; di 1000 = 1000x0.10">
+            </div>
+            <div class="rigaCalc">
+                <div class="rigaCalc">
+                    <input type="submit" id="7" value="7" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="8" value="8" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="9" value="9" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="/" value="/" onclick="num(this.id)" class="tasto">
+                </div>
+                <div class="rigaCalc">
+                    <input type="submit" id="4" value="4" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="5" value="5" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="6" value="6" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="*" value="X" onclick="num(this.id)" class="tasto">
+                </div>
+                <div class="rigaCalc">
+                    <input type="submit" id="1" value="1" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="2" value="2" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="3" value="3" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="-" value="-" onclick="num(this.id)" class="tasto">
+                </div>
+                <div class="rigaCalc">
+                    <input type="submit" value="C" onclick="reset()" class="tasto">
+                    <input type="submit" id="0" value="0" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="00" value="00" onclick="num(this.id)" class="tasto">
+                    <input type="submit" id="+" value="+" onclick="num(this.id)" class="tasto">
+                </div>
+                <div class="rigaCalc">
+                    <input type="submit" id="&lt;" value="&lt;" onclick="cancella()" class="tasto">
+                    <input type="submit" id="." value="." onclick="num(this.id)" class="tasto">
+                    <button value="=" onclick="operazione()" class="uguale tasto">=</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+
+
+    <footer>
+        <div>
+            <address>Per Info chiamare il numero<a class="cell" href="tel:06-12345678"> 1234567891</a> o mandare un
+                email a <a class="cell" href="mailto:@epicode.school">pippo@pluto.com</a> <br>&copy;Diritti d' autore certificati - Pippo, Pluto e Paperino - 2022 </address>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
