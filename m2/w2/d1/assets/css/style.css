@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(25, 25, 169);
+}
+
+hr {
+    border: 2px solid white;
+    background-color: white;
+}
+
+a {
+    color: white;
+    text-decoration-line: none;
+}
+p {
+    color: white;
+    font-weight: bold;
+}
+
+h1, h2 {
+    text-align: center;
+    color: white;
+}
+
+#ciao {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
