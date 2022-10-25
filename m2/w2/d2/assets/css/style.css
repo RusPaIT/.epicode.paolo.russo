@@ -1,0 +1,13 @@
+body {
+    background-color: blue;
+}
+h1 {
+    text-align: center;
+}
+li, h2, p {
+    font-size: bold;
+    font-weight: bold;
+}
+p {
+    color: red;
+}
