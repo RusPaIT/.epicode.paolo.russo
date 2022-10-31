@@ -1,0 +1,7 @@
+div > div > div {
+    border: 1px solid black;
+}
+
+.mioDiv {
+    border: none;
+}
