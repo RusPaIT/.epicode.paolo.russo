@@ -1,0 +1,10 @@
+@mixin link {
+    color: $link-color;
+    text-decoration: none;
+}
+
+@mixin large-screen {
+    @media screen and (min-width: 992px){
+        @content;
+    }
+}

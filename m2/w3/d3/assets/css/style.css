@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
+* {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  background-color: navy;
+  margin-inline: auto;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px black;
+}
+
+li a {
+  color: white;
+  font-style: italic;
+  text-decoration: none;
+}
+
+p a {
+  color: orange;
+  text-decoration: none;
+}
+
+.warning-button {
+  background-color: orange;
+  padding: 5px;
+  margin: 10px 0 10px 0;
+}
+
+li {
+  padding: 15px;
+  list-style: none;
+}
+
+nav ul {
+  display: flex;
+}
+
+#main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 992px) {
+  #main {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 100px 0 150px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main #introduction {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main #promo {
+    margin-top: 30px;
+  }
+}
+#main #content {
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+#main #sidebar {
+  margin-top: 10px;
+}
+#main #sidebar li {
+  border-bottom: dotted rgb(210, 201, 201);
+  margin-bottom: 10px;
+}
+#main #sidebar li:hover {
+  background-color: gray;
+}
+@media screen and (min-width: 992px) {
+  #main #sidebar li {
+    padding-right: 100px;
+    margin-left: 10px;
+    margin-right: -70px;
+  }
+}
+
+#testimonials {
+  margin-top: 10px;
+}
+
+form {
+  margin-top: 50px;
+}
+
+#footer {
+  background-color: rgb(102, 102, 228);
+  height: 100px;
+}/*# sourceMappingURL=style.css.map */

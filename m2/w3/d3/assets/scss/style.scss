@@ -1,0 +1,104 @@
+@import "variables";
+@import "funzioni";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+* {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: $primary-color;
+    margin-inline: auto;
+    border-radius: 10px;
+    border: 1px solid $nav-color;
+    box-shadow: 2px 2px 2px black;
+}
+
+li a {
+    color: $nav-color;
+    font-style: italic;
+    text-decoration: none;
+}
+
+p a {
+    @include link;
+}
+
+.warning-button {
+    background-color: $link-color;
+    padding: 5px;
+    margin: 10px 0 10px 0;
+}
+
+li {
+    padding: $padding-item;
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+#main {
+    @include large-screen {
+        display: flex;
+        flex-direction: row;
+        margin: 40px 100px 0 150px;
+    }
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    #introduction {
+        @include large-screen {
+            margin-top: $margin-30;
+        }
+    }
+
+    #promo {
+        @include large-screen {
+            margin-top: $margin-30;
+        }
+    }
+
+    #content {
+        margin-left: $margin-10;
+        margin-bottom: $margin-30;
+    }
+
+    #sidebar {
+        margin-top: $margin-10;
+
+    }
+
+    #sidebar li {
+        border-bottom: dotted rgb(210, 201, 201);
+        margin-bottom: $margin-10;
+
+        &:hover {
+            background-color: gray;
+        }
+
+        @include large-screen {
+            padding-right: 100px;
+            margin-left: 10px;
+            margin-right: -70px;
+        }
+    }
+}
+
+#testimonials {
+    margin-top: $margin-10;
+}
+
+form {
+        margin-top: 50px;
+    }
+
+#footer {
+    background-color: $secondary-color;
+    height: 100px;
+}
