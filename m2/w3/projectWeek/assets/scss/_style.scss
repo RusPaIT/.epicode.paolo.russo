@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    --bs-navbar-color: red;
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='red' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar {
+    background: linear-gradient(to top, map-get($color, "viola"), map-get($color, "viola2"));
+
+    a:focus {
+        color: white;
+    }
+}
+
+
+#first {
+    background-image: url(../img/pexels-aleksandar-pasaric-325185.jpg);
+    background-position-y: 40%;
+    height: 520px;
+    padding: 100px 0 0 20px;
+
+    button {
+        background-color: map-get($color , 'viola');
+    }
+
+    .fs-1 {
+        font-weight: $light;
+    }
+}
+
+#second {
+    background-color: map-get($color, "grigio");
+
+    p {
+        padding-top: 40px;
+    }
+
+    i {
+        font-size: 40px;
+    }
+
+    .fs-3 {
+        font-weight: $light;
+    }
+}
+
+#third {
+    .fs-3 {
+        font-weight: $light;
+    }
+
+    img {
+        margin-top: 30px;
+    }
+}
+
+#fourth {
+    .fs-2 {
+        font-weight: $light;
+    }
+
+    p {
+        padding-inline: 100px;
+        line-height: 1.8;
+        margin-top: 50px;
+
+        i {
+            color: map-get($color, "rosso");
+        }
+    }
+}
+
+.carousel {
+    img {
+        width: 5rem;
+        height: 5rem;
+        left: 50%;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+}
+
+footer {
+    background: linear-gradient(to top, map-get($color, "viola"), map-get($color, "viola2"));
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    #copyright {
+        font-weight: $light;
+    }
+
+    li {
+        list-style-type: none;
+        font-weight: $light;
+    }
+
+    ul {
+        margin-left: -26px;
+    }
+}
+
+body {
+    @include tc($bg);
+}

@@ -1,0 +1,4 @@
+@mixin tc($color) { 
+    background: $color;
+    color: text-color($color);
+  }  
