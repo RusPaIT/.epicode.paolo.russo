@@ -1,0 +1,95 @@
+{
+    "players": [
+      {
+        "id": 1,
+        "name": "Antonello Venditti",
+        "favorite-game": "Stardew Valley",
+        "subscriber": false
+      },
+      {
+        "id": 2,
+        "name": "Flavio Briatore",
+        "favorite-game": "Dragon Quest XI",
+        "subscriber": false
+      },
+      {
+        "id": 3,
+        "name": "Martinez Quarta",
+        "favorite-game": "Fifa 2023",
+        "subscriber": true
+      },
+      {
+        "id": 4,
+        "name": "Vasco De Gama",
+        "favorite-game": "Uncharted",
+        "subscriber": true
+      },
+      {
+        "id": 5,
+        "name": "John JJ Cristo",
+        "favorite-game": "GTA Via Crucis History",
+        "subscriber": true
+      },
+      {
+        "id": 6,
+        "name": "Veronica Mayers",
+        "favorite-game": "Troy - La caduta",
+        "subscriber": true
+      }
+    ],
+
+    "Homeless": [
+        {
+            "id": 1,
+            "name": "Gino",
+            "nickname": "Puzza",
+            "address": "panchina-parco"
+        },
+        {
+            "id": 2,
+            "name": "Lillo",
+            "nickname": "Foresta",
+            "address": "boschicello-Rogoredo"
+        },
+        {
+            "id": 3,
+            "name": "Nunzio",
+            "nickname": "Palermo",
+            "address": "non è Palermo"
+        },
+        {
+            "id": 4,
+            "name": "Sandra",
+            "nickname": "Lavatrice",
+            "address": "fontana del centro commerciale"
+        }
+    ],
+
+    "Top4SerieA": [
+        {
+            "id": 1,
+            "team": "Napoli",
+            "city": "Napoli",
+            "best-player": "Osimhen"
+        },
+        {
+            "id": 2,
+            "team": "Milan",
+            "city": "Milano",
+            "best-player": "Magnan"
+        },
+        {
+            "id": 3,
+            "team": "Inter",
+            "city": "Milano",
+            "best-player": "Barella"
+        },
+        {
+            "id": 4,
+            "team": "juve",
+            "city": "Torino",
+            "best-player": "Vlahovic"
+        }
+    ]
+}
+
