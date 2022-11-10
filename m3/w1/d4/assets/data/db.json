@@ -1,0 +1,64 @@
+{
+    "Homeless": [
+        {
+            "id": 1,
+            "name": "Gino",
+            "nickname": "Puzza",
+            "address": "panchina-parco"
+        },
+        {
+            "id": 2,
+            "name": "Lillo",
+            "nickname": "SempreFatto",
+            "address": "boschicello-Rogoredo"
+        },
+        {
+            "id": 3,
+            "name": "Nunzio",
+            "nickname": "Palermo",
+            "address": "non è Palermo"
+        },
+        {
+            "id": 4,
+            "name": "Sandra",
+            "nickname": "Lavatrice",
+            "address": "fontana del centro commerciale"
+        },
+        {
+            "id": 5,
+            "name": "Antonello",
+            "nickname": "Cemento",
+            "address": "cimitero"
+        },
+        {
+            "id": 6,
+            "name": "Paolo",
+            "nickname": "Ruspa",
+            "address": "cantiere"
+        },
+        {
+            "id": 7,
+            "name": "Gianna",
+            "nickname": "Salmone",
+            "address": "peschereccio"
+        },
+        {
+            "id": 8,
+            "name": "Mauro",
+            "nickname": "Dislessia",
+            "address": "Undefined"
+        },
+        {
+            "id": 9,
+            "name": "Arnaldo",
+            "nickname": "BRT",
+            "address": "Poste CC"
+        },
+        {
+            "id": 10,
+            "name": "Oreste",
+            "nickname": "PazzoMaledetto",
+            "address": "Nomade"
+        }
+    ]
+}
