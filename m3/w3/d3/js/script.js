@@ -41,9 +41,9 @@ var Persona = /** @class */ (function (_super) {
     };
     return Persona;
 }(Lavoratori));
-var professionista = new Persona(40, 80000, 23, 35);
-var artigiano = new Persona(80, 40000, 23, 25);
-var commerciante = new Persona(60, 50000, 23, 35);
+var professionista = new Persona(78, 80000, 23, 35);
+var artigiano = new Persona(67, 40000, 23, 25);
+var commerciante = new Persona(40, 50000, 23, 35);
 console.log('Utile tasse professionista: ' + professionista.getUtileTasse());
 console.log('Tasse inps professionista: ' + professionista.getTasseInps());
 console.log('Tasse Irpef professionista: ' + professionista.getTasseIrpef());
