@@ -1,0 +1,17 @@
+import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/posts';
+@Component({
+  selector: 'app-users-details',
+  templateUrl: './users-details.component.html',
+  styleUrls: ['./users-details.component.scss']
+})
+export class UsersDetailsComponent implements OnInit {
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+
+  }
+
+}

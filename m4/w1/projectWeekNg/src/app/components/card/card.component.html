@@ -1,0 +1,18 @@
+<div
+  class="card"
+  [ngClass]="{
+    'bg-warning': p.type == 'news',
+    'bg-info': p.type == 'education',
+    'bg-secondary': p.type == 'politic'
+  }"
+>
+  <h5 class="card-header mt-3">
+    <span appEvidenzia [defaultColor]="'yellow'">Post n: {{ p.id }}</span>
+  </h5>
+  <div class="card-body">
+    <h5 class="card-title">{{ p.title | pipe }}</h5>
+    <p class="card-text">{{ p.body }}</p>
+
+    <ng-content></ng-content>
+  </div>
+</div>

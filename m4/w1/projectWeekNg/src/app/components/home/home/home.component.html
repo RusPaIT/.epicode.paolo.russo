@@ -1,0 +1,5 @@
+<h1 class="text-center"><span appEvidenzia [defaultColor]="'yellow'">Benvenuti</span> nella home page</h1>
+<div class="container m-5 d-flex justify-content-center">
+  <a class="btn btn-primary m-5" [routerLink]="['/active']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Post Attivi</a>
+  <a class="btn btn-primary m-5" [routerLink]="['/no-active']" routerLinkActive="active">Post Non Attivi</a>
+</div>
