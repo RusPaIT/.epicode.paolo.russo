@@ -1,7 +1,17 @@
 import { Post } from "src/app/models/posts";
+import { User } from "src/app/models/posts";
 
-var posts:Post[] =[]
+var posts: Post[] =[]
 var det: Post[] = []
+var persone: User[] = [
+  {id: 1, name: "Luca", surname: "Pirlo", city: "Milano"},
+  {id: 2, name: "Paolo", surname: "Giandri", city: "Roma"},
+  {id: 3, name: "Marco", surname: "Mazzone", city: "Bari"}
+]
+
+export function getPersone(){
+  return persone;
+}
 
 export function fetchPost() {
   fetch("http://localhost:3000/posts").then(res => res.json()).then((res: Post[]) => {posts = res})

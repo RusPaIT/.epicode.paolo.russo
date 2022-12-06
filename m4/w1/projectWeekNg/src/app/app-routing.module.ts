@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PostAttiviComponent } from './components/post-attivi/post-attivi.component';
 import { PostNonAttiviComponent } from './components/post-non-attivi/post-non-attivi.component';
+import { UsersDetailsComponent } from './components/users-details/users-details.component';
 import { UsersComponent } from './components/users/users.component';
 
 const routes: Routes = [
@@ -26,7 +27,11 @@ const routes: Routes = [
     },
     {
       path: "users",
-      component: UsersComponent
+      component: UsersComponent,
+      children: [{
+        path: ":id",
+        component: UsersDetailsComponent
+      }]
     }
   ];
 

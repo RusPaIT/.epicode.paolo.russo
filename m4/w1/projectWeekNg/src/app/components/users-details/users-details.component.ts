@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/models/posts';
+import { __importDefault } from 'tslib';
+
 @Component({
   selector: 'app-users-details',
   templateUrl: './users-details.component.html',
@@ -7,8 +10,9 @@ import { User } from 'src/app/models/posts';
 })
 export class UsersDetailsComponent implements OnInit {
 
+ persona: any
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
