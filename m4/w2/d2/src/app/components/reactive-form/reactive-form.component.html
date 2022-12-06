@@ -1,0 +1,44 @@
+<div class="container">
+  <h1 class="text-center">Reactive Forms</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div>
+          <form (ngSubmit)="submit()" [formGroup]="heroForm">
+            <div formGroupName="heroInfo" id="heroInfo">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" class="form-control" required formControlName="name">
+                <p *ngIf="getFormC('heroForm.name')?.invalid && getFormC('heroForm.name')?.touched">
+                  <strong class="text-danger">Questo campo è obbligatorio</strong>
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="alterego">AlterEgo</label>
+                <input type="text" id="alterego" name="alterego" class="form-control" required
+                  formControlName="alterego">
+              </div>
+              <p *ngIf="getFormC('heroForm.alterego')?.invalid && getFormC('heroForm.alterego')?.touched">
+                <strong class="text-danger">Questo campo è obbligatorio</strong>
+              </p>
+              <div formArrayName="power" class="mb-3">
+                <h3>Poteri</h3>
+                <button type="button" (click)="addPower()" class="btn btn-success">Aggiungi
+                  Super Potere</button>
+                <div class="form-group mb-2" *ngFor="let powerC of getPowersF(); let i = index">
+                  <input type="text" class="form-control" [formControlName]="i">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="nemico">Nemico</label>
+                <input type="text" id="nemico" name="nemico" class="form-control" formControlName="nemico">
+              </div>
+
+              <button type="submit" class="btn btn-primary mt-3" [disabled]="heroForm.invalid">Invia</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
