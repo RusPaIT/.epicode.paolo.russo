@@ -1,0 +1,21 @@
+<form (ngSubmit)="submit()" [formGroup]="homeform" class="row g-3">
+  <div class="col-6">
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control"  formControlName="getEmail()">
+  </div>
+  <div class="col-6">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="password">
+  </div>
+  <div class="col-6">
+    <label class="form-label">Indirizzo</label>
+    <input type="text" class="form-control" formControlName="indirizzo">
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Città</label>
+    <input type="text" class="form-control" formControlName="citta">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary" [disabled]="!homeform.invalid">Registrati</button>
+  </div>
+</form>

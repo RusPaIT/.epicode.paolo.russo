@@ -23,8 +23,7 @@
               </p>
               <div formArrayName="power" class="mb-3">
                 <h3>Poteri</h3>
-                <button type="button" (click)="addPower()" class="btn btn-success">Aggiungi
-                  Super Potere</button>
+                <button type="button" (click)="addPower()" class="btn btn-success">Aggiungi Super Potere</button>
                 <div class="form-group mb-2" *ngFor="let powerC of getPowersF(); let i = index">
                   <input type="text" class="form-control" [formControlName]="i">
                 </div>

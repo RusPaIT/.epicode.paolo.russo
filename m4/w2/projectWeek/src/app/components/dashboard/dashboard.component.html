@@ -1,0 +1,13 @@
+<nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <h5 class="navbar-brand">Netflix</h5>
+      <a class="btn nav-link border-0"  [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
+        <a class="btn nav-link border-0"  [routerLink]="['/profilo']" routerLinkActive="active">Profilo</a>
+        <a class="btn nav-link text-danger border-0" (click)="logout()">Esci</a>
+      <h5>Ciao {{name}}</h5>
+
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+
+

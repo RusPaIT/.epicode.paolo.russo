@@ -1,0 +1,9 @@
+<div class="card" style="width: 365px;">
+    <img src="http://image.tmdb.org/t/p/w500/{{m.poster_path}}" class="card-img-top">
+    <div class="card-body">
+      <h6 class="card-title d-inline-block">{{m.original_title}}</h6>
+      <button  class="btn"  (click)="fav ? removeFav() : addFav(m.id, i)" [ngStyle]="{'color': fav ? 'red' : ''}">&#9829;</button>
+    </div>
+  </div>
+
+
