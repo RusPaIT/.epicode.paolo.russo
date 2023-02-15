@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -15,21 +14,21 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="edifici")
+@Table(name="utenti")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @ToString
-public class Edificio {
+public class Utente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	private String nome;
-	private String indirizzo;
-	private String citta;
+	private String username;
+	private String nomeCompleto;
+	private String email;
 	
 }
