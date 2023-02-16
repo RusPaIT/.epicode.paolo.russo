@@ -1,15 +1,13 @@
 package it.paolorusso.GestionePrenotazioni.entity;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -20,31 +18,25 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="utenti")
+@Table(name="prenotazioni")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @ToString
-public class Utente {
+public class Prenotazione {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String username;
-	private String nomeCompleto;
-	private boolean active;
-	private String email;
-	private String password;
 	
-	@ManyToMany
-	@JoinTable(
-		name = "user_roles",
-		joinColumns = @JoinColumn(name = "utenti_id"),
-		inverseJoinColumns = @JoinColumn(name = "role_id")
-		)
+	@ManyToOne
+	private Utente utente;
 	
-	private Set<Role> roles = new HashSet<>();
-
+	@OneToOne
+	private Postazione postazione;
+	private LocalDate data;
+	
+	
 }

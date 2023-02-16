@@ -1,17 +1,16 @@
 package it.paolorusso.GestionePrenotazioni.entity;
 
-import java.util.HashSet;
-import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import it.paolorusso.GestionePrenotazioni.enums.TipoPostazione;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,31 +19,31 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="utenti")
+@Table(name="postazioni")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @ToString
-public class Utente {
+public class Postazione {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String username;
-	private String nomeCompleto;
-	private boolean active;
-	private String email;
-	private String password;
 	
-	@ManyToMany
-	@JoinTable(
-		name = "user_roles",
-		joinColumns = @JoinColumn(name = "utenti_id"),
-		inverseJoinColumns = @JoinColumn(name = "role_id")
-		)
+	private String descrizione;
 	
-	private Set<Role> roles = new HashSet<>();
-
+	@Enumerated(EnumType.STRING)
+	private TipoPostazione tipo;
+	
+	private int numMaxOccupanti;
+	
+	@ManyToOne
+	private Edificio edificio;
+	
+	public void setEdificio(Edificio e) {
+		this.edificio = e;
+	}
+	
 }
