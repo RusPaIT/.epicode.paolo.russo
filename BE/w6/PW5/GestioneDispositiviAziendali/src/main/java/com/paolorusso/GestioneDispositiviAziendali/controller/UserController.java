@@ -50,7 +50,7 @@ public class UserController {
         return ResponseEntity.ok().body(user);
     }
     @PutMapping("{id}")
-    public ResponseEntity<String> updateEdificio(@PathVariable int id, @RequestBody User edificio) {
+    public ResponseEntity<String> updateUser(@PathVariable int id, @RequestBody User edificio) {
         Optional<User> userOptional = usServ.getById(id);
         if (userOptional.isPresent()) {
         	User userToUpdate = userOptional.get();
@@ -71,10 +71,10 @@ public class UserController {
     }
 	
     @DeleteMapping("{id}")
-    public ResponseEntity<String> deleteEdificio(@PathVariable("id") int id) {
+    public ResponseEntity<String> deleteUser(@PathVariable("id") int id) {
         try {
         	usServ.deleteById(id);
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).body("utente eliminato con successo");
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body("user eliminato con successo");
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
