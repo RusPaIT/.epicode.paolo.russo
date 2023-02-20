@@ -23,68 +23,68 @@ import it.paolorusso.GestionePrenotazioni.service.UtenteService;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
-	@Autowired
-	private UtenteService utServ;
-
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		
-		/*
-		 * gestisci le autorizzazioni
-		 * permetti l'accesso a / e /page1 a tutti
-		 * mentre a tutte le altre imponi autorizzazione e redirect sulla pagina
-		 * di login
-		 */
-		http
-			.authorizeRequests()					
-				.antMatchers("/", "/page1")
-				.permitAll()
-			.anyRequest()
-				.authenticated()
-			.and()
-			.formLogin()
-				.successForwardUrl("/login_success")
-			.and()
-			.logout()
-			.and()
-			.csrf()
-				.disable();
-	}
-	
-	// v1 hardcoded
-	/*
-	@Override
-	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication()
-			.withUser("student").password( passwordEncoder().encode("mela") )
-			.roles("ADMIN");
-	}
-	*/
-	
-	// v2 get from db
-	@Override
-	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-		Optional<Utente> authUserObj = utServ.getById(1);
-		Utente authUser = authUserObj.get();
-		String role = "USER";
-		Set<Role> roles = authUser.getRoles();
-		
-		for( Role r : roles ) {
-			if( r.getType().toString().contains("ADMIN") ) {
-				role = "ADMIN";
-				break;
-			}
-		}
-		
-		auth.inMemoryAuthentication()
-			.withUser( authUser.getUsername() ).password( passwordEncoder().encode( authUser.getPassword() ) )
-			.roles(role);
-	}
-	
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
+//	@Autowired
+//	private UtenteService utServ;
+//
+//	@Override
+//	protected void configure(HttpSecurity http) throws Exception {
+//		
+//		/*
+//		 * gestisci le autorizzazioni
+//		 * permetti l'accesso a / e /page1 a tutti
+//		 * mentre a tutte le altre imponi autorizzazione e redirect sulla pagina
+//		 * di login
+//		 */
+//		http
+//			.authorizeRequests()					
+//				.antMatchers("/", "/page1")
+//				.permitAll()
+//			.anyRequest()
+//				.authenticated()
+//			.and()
+//			.formLogin()
+//				.successForwardUrl("/login_success")
+//			.and()
+//			.logout()
+//			.and()
+//			.csrf()
+//				.disable();
+//	}
+//	
+//	// v1 hardcoded
+//	/*
+//	@Override
+//	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+//		auth.inMemoryAuthentication()
+//			.withUser("student").password( passwordEncoder().encode("mela") )
+//			.roles("ADMIN");
+//	}
+//	*/
+//	
+//	// v2 get from db
+//	@Override
+//	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+//		Optional<Utente> authUserObj = utServ.getById(1);
+//		Utente authUser = authUserObj.get();
+//		String role = "USER";
+//		Set<Role> roles = authUser.getRoles();
+//		
+//		for( Role r : roles ) {
+//			if( r.getType().toString().contains("ADMIN") ) {
+//				role = "ADMIN";
+//				break;
+//			}
+//		}
+//		
+//		auth.inMemoryAuthentication()
+//			.withUser( authUser.getUsername() ).password( passwordEncoder().encode( authUser.getPassword() ) )
+//			.roles(role);
+//	}
+//	
+//	@Bean
+//	public PasswordEncoder passwordEncoder() {
+//		return new BCryptPasswordEncoder();
+//	}
 	
 }
 

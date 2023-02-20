@@ -43,4 +43,5 @@ public class Device {
     private DeviceStatus status;
     
 
+    
 }

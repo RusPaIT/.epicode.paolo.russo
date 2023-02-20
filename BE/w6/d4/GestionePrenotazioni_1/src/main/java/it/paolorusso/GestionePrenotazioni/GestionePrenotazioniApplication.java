@@ -249,29 +249,29 @@ public class GestionePrenotazioniApplication implements CommandLineRunner {
 		return pos;
 	}
 
-	public void popolaDB() {
-
-		Edificio ed1 = inserisciEdificio("A", "Via Caio,1", "Roma");
-		Edificio ed2 = inserisciEdificio("B", "Via Dei Pazzi,2", "Genova");
-		Edificio ed3 = inserisciEdificio("C", "Via Sempronio,3", "Milano");
+//	public void popolaDB() {
+//
+//		Edificio ed1 = inserisciEdificio("A", "Via Caio,1", "Roma");
+//		Edificio ed2 = inserisciEdificio("B", "Via Dei Pazzi,2", "Genova");
+//		Edificio ed3 = inserisciEdificio("C", "Via Sempronio,3", "Milano");
 //
 //		Utente u1 = inserisciUtente("LaDea", "Anna Falchi", "a@falchi.it");
 //		Utente u2 = inserisciUtente("PorcaPuttena", "Lino Banfi", "l@banfi.it");
 //		Utente u3 = inserisciUtente("Tignori", "Maurizio Costanzo", "m@costanzo.it");
-
-		Postazione p1 = inserisciPostazione("Postazione Open", TipoPostazione.OPENSPACE, 20, ed1);
-		Postazione p2 = inserisciPostazione("Sala Riunioni A", TipoPostazione.SALA_RIUNIONI, 10, ed1);
-		Postazione p3 = inserisciPostazione("Sala Riunioni B", TipoPostazione.SALA_RIUNIONI, 12, ed1);
-		Postazione p4 = inserisciPostazione("Postazione Singola", TipoPostazione.PRIVATO, 1, ed2);
-		Postazione p5 = inserisciPostazione("Postazione Doppia", TipoPostazione.PRIVATO, 2, ed2);
-		Postazione p6 = inserisciPostazione("Postazione Open", TipoPostazione.OPENSPACE, 20, ed2);
-		Postazione p7 = inserisciPostazione("Postazione Open", TipoPostazione.OPENSPACE, 30, ed3);
-		Postazione p8 = inserisciPostazione("Sala Riunioni C", TipoPostazione.SALA_RIUNIONI, 8, ed3);
-		Postazione p9 = inserisciPostazione("Postazione Tripla", TipoPostazione.PRIVATO, 4, ed3);
-
+//
+//		Postazione p1 = inserisciPostazione("Postazione Open", TipoPostazione.OPENSPACE, 20, ed1);
+//		Postazione p2 = inserisciPostazione("Sala Riunioni A", TipoPostazione.SALA_RIUNIONI, 10, ed1);
+//		Postazione p3 = inserisciPostazione("Sala Riunioni B", TipoPostazione.SALA_RIUNIONI, 12, ed1);
+//		Postazione p4 = inserisciPostazione("Postazione Singola", TipoPostazione.PRIVATO, 1, ed2);
+//		Postazione p5 = inserisciPostazione("Postazione Doppia", TipoPostazione.PRIVATO, 2, ed2);
+//		Postazione p6 = inserisciPostazione("Postazione Open", TipoPostazione.OPENSPACE, 20, ed2);
+//		Postazione p7 = inserisciPostazione("Postazione Open", TipoPostazione.OPENSPACE, 30, ed3);
+//		Postazione p8 = inserisciPostazione("Sala Riunioni C", TipoPostazione.SALA_RIUNIONI, 8, ed3);
+//		Postazione p9 = inserisciPostazione("Postazione Tripla", TipoPostazione.PRIVATO, 4, ed3);
+//
 //		inserisciPrenotazione(u1, p1, LocalDate.parse("2023-03-03"));
 //		inserisciPrenotazione(u1, p4, LocalDate.parse("2023-04-03"));
-	}
+//	}
 
 }
 

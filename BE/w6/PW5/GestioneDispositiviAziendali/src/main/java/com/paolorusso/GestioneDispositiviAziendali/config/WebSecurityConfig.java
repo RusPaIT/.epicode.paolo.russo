@@ -1,5 +1,6 @@
 package com.paolorusso.GestioneDispositiviAziendali.config;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -27,30 +28,32 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	 @Override
 	 protected void configure(HttpSecurity http) throws Exception {
-	        http.csrf().disable()
-	            .authorizeRequests()
-	                .antMatchers(HttpMethod.GET, "/**").permitAll() 
-	                .antMatchers("/**").hasRole("ADMIN") 
-	            .and()
-	            .httpBasic();
+	 http.authorizeRequests()
+	   	 .antMatchers(HttpMethod.GET, "/**").permitAll() 
+	     .antMatchers("/**").hasRole("ADMIN") 
+	 .anyRequest()
+	     .authenticated()
+	 .and()
+	 .httpBasic()
+	 .and()
+	 .formLogin()
+	     .successForwardUrl("/users/login_success")
+	 .and()
+	 .logout()
+	 .and()
+	 .csrf()
+	     .disable();
 	    }
 
 
 	@Override
 	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-		Optional<User> authUserObj = usServ.getById(1);
-		User authUser = authUserObj.get();
-		String role = "USER";
-		RoleType userRole = authUser.getType();
-		
-		if (userRole.toString().contains("ADMIN")) {
-	        role = "ADMIN";
-	    }
-		
-		auth.inMemoryAuthentication()
-        .withUser(authUser.getUsername())
-        .password(this.passwordEncoder().encode(authUser.getPassword()))
-        .roles(role);
+		List<User> authUtenti = usServ.getAll();
+        for (User u : authUtenti) { 
+                auth.inMemoryAuthentication()
+                .withUser( u.getUsername() ).password( passwordEncoder().encode( u.getPassword() ) )
+                .roles(u.getType().toString());
+            }
 		
 	}
 	

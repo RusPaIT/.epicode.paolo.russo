@@ -49,8 +49,8 @@ public class User {
 	@OneToMany
 	@JoinTable(
 		name = "user_devices",
-		joinColumns = @JoinColumn(name = "users_id"),
-		inverseJoinColumns = @JoinColumn(name = "devices_id")
+		joinColumns = @JoinColumn(name = "user_id"),
+		inverseJoinColumns = @JoinColumn(name = "device_id")
 		)
 	
 	private Set<Device> devices = new HashSet<>();

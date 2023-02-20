@@ -50,7 +50,7 @@ public class UserController {
         return ResponseEntity.ok().body(user);
     }
     @PutMapping("{id}")
-    public ResponseEntity<String> updateUser(@PathVariable int id, @RequestBody User edificio) {
+    public ResponseEntity<String> updateUser(@PathVariable int id) {
         Optional<User> userOptional = usServ.getById(id);
         if (userOptional.isPresent()) {
         	User userToUpdate = userOptional.get();
